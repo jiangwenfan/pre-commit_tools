@@ -18,3 +18,14 @@ repos:
       stages: [commit]
 
 ```
+
+如果没有安装pre-commit:
+
+install pre-commit:
+```bash
+pip install pre-commit
+```
+设置pre-commit hooks:
+```bash
+pre-commit install
+```

@@ -1,0 +1,6 @@
+- id: check-coverage
+  name: Check Coverage
+  # check command. 容器名 容器内manage.py 覆盖率
+  entry: .pre-commit-hooks/check_coverage.sh [container_name] [manage.py] [90]
+  language: script
+  stages: [commit]
