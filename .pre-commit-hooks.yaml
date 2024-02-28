@@ -4,3 +4,9 @@
   entry: .pre-commit-hooks/check_coverage.sh [container_name] [manage.py] [90]
   language: script
   stages: [commit]
+- id: generate-sample-file
+  name: generate sample file
+  # check command. 配置文件名 配置文件类型
+  entry: .pre-commit-hooks/generate_sample_file.sh [config_file_name] [config_file_type]
+  language: script
+  stages: [commit]
