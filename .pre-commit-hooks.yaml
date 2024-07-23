@@ -14,6 +14,6 @@
 -   id: generate-sample-toml-file
     name: 生成toml配置文件
     description: python测试描述
-    entry: generate_sample_toml
+    entry: generate_sample_toml --verbose
     language: python
 
