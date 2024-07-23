@@ -18,5 +18,5 @@
     entry: generate_sample_toml  --file ./config.toml --verbose
     language: python
     files: ''
-    # args: []
+    args: []
 
