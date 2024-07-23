@@ -17,4 +17,6 @@
     description: python测试描述
     entry: generate_sample_toml  --file ./config.toml --verbose
     language: python
+    files: ''
+    # args: []
 
