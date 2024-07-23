@@ -26,7 +26,7 @@ pre-commit install
 ```yaml
 repos:
 
-  - repo: https://github.com/jiangwenfan/unit-testing
+  - repo: https://github.com/jiangwenfan/pre-commit_tools.git
     # [修改] 更新到最新
     rev: v0.0.4
     hooks:
@@ -42,3 +42,34 @@ repos:
 
 ### generate_toml_sample_file
 从本地 `xxx.toml` 文件生成 `xxx.toml.sample`文件
+```yaml
+repos:
+
+  - repo: https://github.com/jiangwenfan/pre-commit_tools.git
+    # [修改] 更新到最新
+    rev: v0.0.6
+    hooks:
+    - id: generate-sample-toml-file
+      # 默认使用.pre-commit-hooks.yaml中的name1,这里可以定义覆盖
+      name: 从toml配置文件生成toml sample文件
+      description: python测试描述
+      # 显示日志 --verbose
+      # 指定要处理toml文件 --file ./config.toml 默认是 config.toml
+      entry: generate_sample_toml
+      language: python
+      # commit 阶段执行
+      stages: [commit]
+```
+执行
+```
+pre-commit run --all-files 
+```
+输出,本地多了一个`config.toml.sample`文件
+```
+(base) jason@jasonMacPro pre-test % pre-commit run --all-files 
+[INFO] Initializing environment for https://github.com/jiangwenfan/pre-commit_tools.git.
+[INFO] Installing environment for https://github.com/jiangwenfan/pre-commit_tools.git.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+从toml配置文件生成toml sample文件........................................Passed
+```
