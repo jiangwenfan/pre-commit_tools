@@ -4,7 +4,7 @@
   entry: .pre-commit-hooks/check_coverage.sh [container_name] [manage.py] [90]
   language: script
   stages: [commit]
-  
+
 # - id: generate-sample-file
 #   name: generate sample file
 #   # check command. 配置文件名 配置文件类型
@@ -15,6 +15,6 @@
 -   id: generate-sample-toml-file
     name: 生成toml配置文件
     description: python测试描述
-    entry: generate_sample_toml --verbose
+    entry: generate_sample_toml  --file ./config.toml --verbose
     language: python
 
