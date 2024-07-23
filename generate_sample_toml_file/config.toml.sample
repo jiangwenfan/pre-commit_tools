@@ -1,0 +1,85 @@
+[project]
+debug = "bool-xxx"
+secret_key = "str-xxx"
+
+[project.account]
+email = "str-xxx"
+area_code = "str-xxx"
+phone_number = "str-xxx"
+password = "str-xxx"
+
+[database.mysql]
+host = "str-xxx"
+port = "str-xxx"
+database = "str-xxx"
+user = "str-xxx"
+password = "str-xxx"
+root_password = "str-xxx"
+
+[cache]
+host = "str-xxx"
+port = "int-xxx"
+core_db = "int-xxx"
+monitoring_db = "int-xxx"
+celery_db = "int-xxx"
+
+[translate]
+provider = "str-xxx"
+
+[translate.youdao]
+YOUDAO_URL = "str-xxx"
+APP_KEY = "str-xxx"
+APP_SECRET = "str-xxx"
+class_path = "str-xxx"
+
+[translate.microsoft]
+
+[translate.tencent]
+secret_key = "str-xxx"
+secret_id = "str-xxx"
+
+[storage]
+type = "str-xxx"
+class_path = "str-xxx"
+
+[storage.image]
+image_home_dir = "str-xxx"
+image_home_url = "str-xxx"
+
+[storage.file]
+file_home_dir = "str-xxx"
+file_home_url = "str-xxx"
+
+[storage.word_audio]
+word_audio_home_dir = "str-xxx"
+word_audio_home_url = "str-xxx"
+
+[storage.sentence_audio]
+sentence_audio_home_dir = "str-xxx"
+sentence_audio_home_url = "str-xxx"
+
+[sms]
+provider = "str-xxx"
+
+[sms.tencent]
+endpoint = "str-xxx"
+secret_id = "str-xxx"
+secret_key = "str-xxx"
+sign_name = "str-xxx"
+app_id = "str-xxx"
+template_id = "str-xxx"
+veri_code_timeout = "str-xxx"
+
+[tts.microsoft]
+speech_region = "str-xxx"
+speech_key = "str-xxx"
+
+[email]
+provider = "str-xxx"
+veri_code_timeout = "str-xxx"
+
+[email.smtp]
+host = "str-xxx"
+user = "str-xxx"
+port = "int-xxx"
+passwd = "str-xxx"

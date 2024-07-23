@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pre-commit-tools"
+version = "0.1.0"
+description = "生成sample toml file"
+authors = ["evans.jiang <evans.jiang@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "generate_sample_toml_file" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tomli-w = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+# testaaa是命令名称，aaa.aa是模块名，main是模块中的函数名
+generate_sample_toml = "generate_sample_toml_file.main:main"
