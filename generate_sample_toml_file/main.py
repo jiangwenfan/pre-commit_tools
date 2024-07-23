@@ -70,7 +70,8 @@ def main():
         help="可选参数，增加输出的详细程度，默认不输出日志",
     )
 
-    args: Namespace = parser.parse_args()
+    # args: Namespace = parser.parse_args()
+    args, unknown = parser.parse_known_args()
 
     if args.verbose:
         logging.basicConfig(level=logging.INFO)
