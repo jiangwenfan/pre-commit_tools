@@ -15,8 +15,7 @@
 -   id: generate-sample-toml-file
     name: 生成toml配置文件
     description: python测试描述
-    entry: generate_sample_toml --file ./config.toml --verbose
+    # 显示日志 --verbose
+    # 指定要处理toml文件 --file ./config.toml 默认是 config.toml
+    entry: generate_sample_toml
     language: python
-    files: ''
-    args: []
-
