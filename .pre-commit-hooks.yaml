@@ -12,14 +12,14 @@
 #   language: script
 #   stages: [commit]
 
--   id: generate-sample-toml-file
-    name: 生成toml配置文件
-    description: python处理
-    entry: generate_sample_toml
-    language: python
+- id: generate-sample-toml-file
+  name: 生成toml配置文件
+  description: python处理
+  entry: generate_sample_toml
+  language: python
 
--   id: generate-sample-env-file
-    name: 生成env配置文件
-    description: node处理
-    entry: generate_sample_env
-    language: node
+- id: generate-sample-env-file
+  name: 生成env配置文件
+  description: node处理
+  entry: generate_sample_env
+  language: node

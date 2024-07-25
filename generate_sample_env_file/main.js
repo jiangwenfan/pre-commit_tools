@@ -35,15 +35,13 @@ function main() {
     // 获取命令行参数
     const args = process.argv.slice(2);
 
-    // 判断参数个数. 
-    // 只能0个参数，使用默认.env文件
-    // 或者1个参数，使用指定的.env文件
-    if (args.length > 1) {
-        console.error("参数个数错误,只能0个参数或者1个参数,传递.env文件路径");
-        process.exit(1);
-    } else if (args.length == 1) {
-        // console.log(`读取 ${args[0]} 文件...`);
-        handleEnvFile(envPath = args[0]);
+    const fileOption = args.find(item => item.startsWith("--file="));
+
+    // 判断参数个数. 如果没有找到--file=xxx参数,则使用默认值
+    if (fileOption) {
+        const envPath = fileOption.split('=')[1];
+        // console.log(`读取 ${envPath} 文件...`);
+        handleEnvFile(envPath);
     } else {
         // console.log(`读取当前目录下的 .env 文件...`);
         handleEnvFile();
