@@ -1,0 +1,21 @@
+{
+  "name": "pre-commit_tools",
+  "version": "1.0.0",
+  "description": "这个项目主要提供了django单元测试相关的pre-commit hooks工具,实现了在提交`git commit`时，执行下面hooks",
+  "main": "generate_sample_env_file/main.js",
+  "files": [
+    "generate_sample_env_file"
+  ],
+  "bin": {
+    "generate_sample_env": "./generate_sample_env_file/main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
