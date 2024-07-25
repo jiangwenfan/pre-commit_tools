@@ -39,6 +39,21 @@ repos:
 ```
 ### generate_env_sample_file
 从本地 `.env` 文件生成 `.env.sample`文件
+```yaml
+repos:
+
+  - repo: https://github.com/jiangwenfan/pre-commit_tools.git
+    # [修改] 更新到最新
+    rev: v0.0.8
+    hooks:
+    - id: generate-sample-env-file
+      name: 生成env配置文件
+      description: node处理
+      # 默认处理当前目录下的.env文件，也可以通过这样： --file="a/b/c/.env" 处理指定目录的.env文件
+      entry: generate_sample_env
+      language: node
+      stages: [commit]
+```
 
 ### generate_toml_sample_file
 从本地 `xxx.toml` 文件生成 `xxx.toml.sample`文件
@@ -47,12 +62,12 @@ repos:
 
   - repo: https://github.com/jiangwenfan/pre-commit_tools.git
     # [修改] 更新到最新
-    rev: v0.0.6
+    rev: v0.0.8
     hooks:
     - id: generate-sample-toml-file
       # 默认使用.pre-commit-hooks.yaml中的name1,这里可以定义覆盖
       name: 从toml配置文件生成toml sample文件
-      description: python测试描述
+      description: python处理
       # 显示日志 --verbose
       # 指定要处理toml文件 --file ./config.toml 默认是 config.toml
       entry: generate_sample_toml
